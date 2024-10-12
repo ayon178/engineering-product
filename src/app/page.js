@@ -1,11 +1,15 @@
 import AboutUs from '@/components/home/AboutUs'
 import AskForQuote from '@/components/home/AskForQuote'
 import BrandList from '@/components/home/BrandList'
+import CommitmentSection from '@/components/home/CommitmentSection'
+import CoreFeaturesSection from '@/components/home/CoreFeaturesSection'
+import MechanicalEngineering from '@/components/home/MechanicalEngineering'
 import OurProducts from '@/components/home/OurProducts'
 import PreviousProjects from '@/components/home/PreviousProjects'
 import PriceQuote from '@/components/home/PriceQuote'
 import ProductCategories from '@/components/home/ProductCategories'
 import ProductSlide from '@/components/home/ProductSlide'
+import ServiceSection from '@/components/home/ServiceSection'
 import Slider from '@/components/shared/slider/Slider'
 import {
   pCarElevator1,
@@ -245,6 +249,10 @@ export default function Home() {
       <AboutUs />
       <PriceQuote />
       <OurProducts />
+      <ServiceSection />
+      <CommitmentSection />
+      <CoreFeaturesSection />
+      <MechanicalEngineering />
       <ProductSlide
         data={elevator}
         title="Elevators & Escalator"
