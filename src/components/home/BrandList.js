@@ -201,11 +201,11 @@ const cardStyles = {
   alignItems: 'center',
   justifyContent: 'center',
   width: '20rem',
-  boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)', // Increased shadow
+  // boxShadow: '0 6px 12px rgba(0, 0, 0, 0.15)', // Increased shadow
   transition: 'box-shadow 0.3s ease',
-  '&:hover': {
-    boxShadow: '0 12px 24px rgba(0, 0, 0, 0.25)', // Darker shadow on hover
-  },
+  // '&:hover': {
+  //   boxShadow: '0 12px 24px rgba(0, 0, 0, 0.25)', // Darker shadow on hover
+  // },
 }
 
 export default BrandList

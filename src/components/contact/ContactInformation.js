@@ -1,66 +1,96 @@
-"use client";
+'use client'
 
-import { Box, Typography } from "@mui/material";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { whyUs } from "@/constant/images";
+import React from 'react'
+import { Box, Typography } from '@mui/material'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { whyUs } from '@/constant/images' // Replace with your banner image
+import Image from 'next/image'
 
-const ContactInformation = () => {
+const HalfBanner = () => {
   const { ref, inView } = useInView({
-    triggerOnce: false, // Animation triggers only once
-    threshold: 0.1, // Trigger when 10% of the element is in view
-  });
+    triggerOnce: false,
+    threshold: 0.1,
+  })
 
-  const containerVariants = {
+  const bannerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
-  };
+  }
+
+  const textVariants = {
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: 0.8 } },
+  }
 
   return (
     <Box
-      ref={ref}
       sx={{
-        position: "relative",
-        height: "300px",
-        backgroundImage: `url(${whyUs.src})`, 
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        color: "#fff",
-        padding: "20px",
-          overflow: "hidden",
-        marginTop: '80px'
+        position: 'relative',
+        width: '100%',
+        height: '60vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        overflow: 'hidden',
+        backgroundColor: '#f5f5f5',
       }}
+      ref={ref}
     >
+      {/* Image Wrapper */}
       <motion.div
-        variants={containerVariants}
+        variants={bannerVariants}
         initial="hidden"
-        animate={inView ? "visible" : "hidden"}
+        animate={inView ? 'visible' : 'hidden'}
         style={{
-          width: "100%",
-          maxWidth: "600px",
-          padding: "20px",
-          background: "rgba(0, 0, 0, 0.7)", // Dark overlay for better text contrast
-          borderRadius: "8px",
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
         }}
       >
-        <Typography variant="h4" sx={{ mb: 2, fontWeight: "bold" }}>
+        <Image
+          src={whyUs}
+          alt="About Banner"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </motion.div>
+
+      {/* Overlay */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'rgba(0, 0, 0, 0.7)', // Adjust opacity as needed
+          zIndex: 1,
+        }}
+      />
+
+      {/* Text Box */}
+      <motion.div
+        variants={textVariants}
+        initial="hidden"
+        animate={inView ? 'visible' : 'hidden'}
+        style={{
+          zIndex: 2, // Ensure the text is above the overlay
+          textAlign: 'center',
+          color: '#fff',
+          padding: 2,
+          borderRadius: 1,
+        }}
+      >
+        <Typography variant="h2" sx={{ fontWeight: 'bold' }}>
           Contact Us
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 4 }}>
-          We are here to assist you! Reach out to us for any queries or support.
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 2 }}>
-          Email: syntax.solutions.bd@gmail.com<br />
-          Phone: +123 456 7890<br />
-          Address: 1234 Example St, City, Country
         </Typography>
       </motion.div>
     </Box>
-  );
-};
+  )
+}
 
-export default ContactInformation;
+export default HalfBanner

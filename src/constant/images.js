@@ -2,6 +2,10 @@ import Logo from '@/assets/logo.png'
 import slider1 from '@/assets/Sliders/1.jpg'
 import slider2 from '@/assets/Sliders/2.jpg'
 import slider3 from '@/assets/Sliders/3.jpg'
+import slider4 from '@/assets/Sliders/4.jpeg'
+import slider5 from '@/assets/Sliders/5.jpg'
+import slider6 from '@/assets/Sliders/7.jpg'
+import slider7 from '@/assets/Sliders/8.jpg'
 
 import pCargoElevator1 from '@/assets/Products/Cargo-Elevator/cargo-lift-001.jpg'
 import pCargoElevator2 from '@/assets/Products/Cargo-Elevator/cargo-lift-002.jpg'
@@ -79,6 +83,10 @@ export {
   slider1,
   slider2,
   slider3,
+  slider4,
+  slider5,
+  slider6,
+  slider7,
   pCargoElevator1,
   pCargoElevator2,
   pCargoElevator3,

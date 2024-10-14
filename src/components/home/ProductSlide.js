@@ -19,7 +19,7 @@ const ProductSlide = ({ data, title, slidesToShow, firstR, secondR }) => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     autoplay: true,
     slidesToShow: slidesToShow, // Default number of slides to show
     slidesToScroll: 1,

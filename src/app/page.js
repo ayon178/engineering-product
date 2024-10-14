@@ -10,6 +10,7 @@ import PriceQuote from '@/components/home/PriceQuote'
 import ProductCategories from '@/components/home/ProductCategories'
 import ProductSlide from '@/components/home/ProductSlide'
 import ServiceSection from '@/components/home/ServiceSection'
+import Slider2 from '@/components/shared/slider/Slider2'
 import Slider from '@/components/shared/slider/Slider'
 import {
   pCarElevator1,
@@ -245,14 +246,15 @@ const solarEquipment = [
 export default function Home() {
   return (
     <>
-      <Slider />
+      {/* <Slider /> */}
+      <Slider2 />
       <AboutUs />
-      <PriceQuote />
-      <OurProducts />
-      <ServiceSection />
-      <CommitmentSection />
       <CoreFeaturesSection />
-      <MechanicalEngineering />
+      <PriceQuote />
+      {/* <OurProducts /> */}
+
+      {/* <CommitmentSection /> */}
+
       <ProductSlide
         data={elevator}
         title="Elevators & Escalator"
@@ -276,7 +278,7 @@ export default function Home() {
       />
       <BrandList />
       {/* <ProductCategories /> */}
-      <PreviousProjects />
+      {/* <PreviousProjects /> */}
       <AskForQuote />
     </>
   )

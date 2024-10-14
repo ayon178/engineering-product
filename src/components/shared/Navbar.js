@@ -27,9 +27,9 @@ import { COLORS } from '@/constant/constant'
 const navItems = [
   { item: 'Home', url: '/' },
   { item: 'About Us', url: '/about-us' },
+  { item: 'Our Services', url: '/maintenance' },
   { item: 'Our Products', url: '/our-products' },
   // {item: 'Portfolio Sumery', url:'/portfolio-summery'},
-  { item: 'Maintenance Service', url: '/maintenance' },
   { item: 'Contact Us', url: '/contact' },
 ]
 
@@ -89,7 +89,7 @@ const ResponsiveNavbar = () => {
     <AppBar
       position="fixed"
       sx={{
-        backgroundColor: '#36454F',
+        backgroundColor: 'rgba(123, 136, 142, .85)',
         boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
         transition: 'height 0.3s ease-in-out',
         height: scrolled ? '60px' : '65px', // Dynamic height based on scroll
@@ -107,15 +107,32 @@ const ResponsiveNavbar = () => {
         <Typography
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1, fontWeight: 'bold', mb: '-10px' }}
+          sx={{
+            flexGrow: 1,
+            fontWeight: 'bold',
+            mb: '-10px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 1,
+          }}
         >
           <Link href={'/'}>
             <Image src={Logo} width={50} height={50} alt="Logo" />
           </Link>
+
+          <Link href={'/'}>
+            <Typography
+              variant="h6"
+              sx={{ marginTop: '-10px', color: '#e8e8e8' }}
+              className="poppins_font"
+            >
+              BD Feedback Engineering Solutions
+            </Typography>
+          </Link>
         </Typography>
 
         {/* Desktop Menu */}
-        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
+        <Box sx={{ display: { xs: 'none', lg: 'flex' }, gap: 3 }}>
           {navItems.map((item, i) => (
             <motion.div whileHover="hover" variants={menuVariants} key={i}>
               <Button
@@ -164,7 +181,7 @@ const ResponsiveNavbar = () => {
         </Box>
 
         {/* Mobile Menu Icon and Profile */}
-        <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center' }}>
+        <Box sx={{ display: { xs: 'flex', lg: 'none' }, alignItems: 'center' }}>
           <IconButton color="inherit" onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>

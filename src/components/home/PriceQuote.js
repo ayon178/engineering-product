@@ -23,8 +23,8 @@ const quoteImages = [
   elevator1,
   generator1,
   passenger1,
-  passenger2,
-  solar,
+  // passenger2,
+  // solar,
 ]
 
 const TopSection = styled(Box)(({ theme }) => ({
@@ -47,7 +47,7 @@ const TopSection = styled(Box)(({ theme }) => ({
 const ImageGridItem = styled(Box)(({ theme }) => ({
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  height: '300px',
+  height: '400px',
   position: 'relative',
   color: '#fff',
   padding: theme.spacing(2),
@@ -114,7 +114,7 @@ const PriceQuote = () => {
 
       {/* Bottom Section - Image Grid */}
       <Box>
-        <Grid container spacing={1}>
+        <Grid container>
           {quoteImages.map((image, index) => (
             <Grid item xs={12} md={4} key={index}>
               <ImageGridItem sx={{ backgroundImage: `url(${image.src})` }}>
