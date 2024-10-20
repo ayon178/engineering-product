@@ -24,14 +24,15 @@ const sliderData = [
   },
   {
     image: slider1,
-    heading: 'Innovative Engineering Solutions',
+    heading: 'Innovative engineering <br/> with reliable service',
     subHeading: 'Leading the Future of Engineering',
     cta: 'Learn More',
     link: '/products',
   },
   {
     image: slider4,
-    heading: 'Customer Satisfaction Guaranteed',
+    heading:
+      'Customer Satisfaction <br/> with top global brands & expert service',
     subHeading: 'Your Trust, Our Commitment',
     cta: 'Contact Us',
     link: '/contact',
@@ -183,8 +184,8 @@ const Slider = () => {
                       backgroundColor: 'rgba(54, 69, 79, .6)',
                       width: 'fit-content',
                       padding: '15px',
-                      paddingLeft: index === 0 ? '45px' : '15px',
-                      paddingRight: index === 0 ? '45px' : '15px',
+                      paddingLeft: index === 0 ? '45px' : '30px',
+                      paddingRight: index === 0 ? '45px' : '30px',
                       borderRadius: `${
                         index === 0
                           ? '0 10px 10px 0' // Top-right and bottom-right radius
@@ -210,6 +211,7 @@ const Slider = () => {
                     <Typography
                       variant="h5"
                       sx={{
+                        mt: 2,
                         mb: 3,
                         fontSize: {
                           xs: '1rem',
