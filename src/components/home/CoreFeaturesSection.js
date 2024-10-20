@@ -3,16 +3,16 @@ import { Container, Grid, Typography, Box, Divider } from '@mui/material'
 
 const coreFeatures = [
   {
-    icon: '/path/to/vision-icon.svg', // Replace with actual path to the icon
+    icon: 'https://i.ibb.co/Wp7PGX3/mission.png', // Replace with actual path to the icon
+    title: 'MISSION',
+  },
+  {
+    icon: 'https://i.ibb.co/MCd0LBj/vission.png', // Replace with actual path to the icon
     title: 'VISION',
   },
   {
-    icon: '/path/to/values-icon.svg', // Replace with actual path to the icon
+    icon: 'https://i.ibb.co/nBgP28p/values.png', // Replace with actual path to the icon
     title: 'VALUES',
-  },
-  {
-    icon: '/path/to/mission-icon.svg', // Replace with actual path to the icon
-    title: 'MISSION',
   },
 ]
 

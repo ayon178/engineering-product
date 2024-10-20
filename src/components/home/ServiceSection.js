@@ -9,24 +9,24 @@ import {
 
 const services = [
   {
-    title: 'Cutting',
+    title: 'After Sales',
     description: 'Consectetur adipiscing elit.',
-    icon: '/icons/cutting.svg',
+    icon: 'https://i.ibb.co/4WG0B1R/after-sales.png',
   },
   {
-    title: 'Welding',
+    title: 'Engineering',
     description: 'Consectetur adipiscing elit.',
-    icon: '/icons/welding.svg',
+    icon: 'https://i.ibb.co/y8K2bDd/engineering.png',
   },
   {
-    title: 'Turning',
+    title: 'Expert Installation',
     description: 'Consectetur adipiscing elit.',
-    icon: '/icons/turning.svg',
+    icon: 'https://i.ibb.co/GR8wL0v/expert.png',
   },
   {
-    title: 'Milling',
+    title: 'Products',
     description: 'Consectetur adipiscing elit.',
-    icon: '/icons/milling.svg',
+    icon: 'https://i.ibb.co/n6cpzHg/products.png',
   },
 ]
 
@@ -83,7 +83,7 @@ const ServiceSection = () => {
                     component="img"
                     image={service.icon}
                     alt={service.title}
-                    sx={{ width: 50, height: 50, mb: 2 }}
+                    sx={{ width: 50, height: 50, }}
                   />
                   <CardContent>
                     <Typography variant="h6" component="div">
