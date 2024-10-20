@@ -43,7 +43,7 @@ const categoriesData = [
   },
 ]
 
-const ProductCategories = ({ setId }) => {
+const ProductCategories = ({ setId, id }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
@@ -119,25 +119,27 @@ const ProductCategories = ({ setId }) => {
                 description={category.description}
                 image={category.image}
                 id={category.id}
+                passedId={id}
                 redirectFunc={redirect}
               />
             </div>
           ))}
         </Slider>
-        {/* <Button
-          variant="contained"
-          color="primary"
-          sx={{ mt: 4 }}
-          onClick={() => alert('CTA Button Clicked')}
-        >
-          Explore All Categories
-        </Button> */}
       </motion.div>
     </Box>
   )
 }
 
-const CategoryCard = ({ title, description, image, redirectFunc, id }) => {
+const CategoryCard = ({
+  title,
+  description,
+  image,
+  redirectFunc,
+  id,
+  passedId,
+}) => {
+  const isSelected = passedId === id
+
   return (
     <Box
       onClick={() => redirectFunc(id)}
@@ -148,11 +150,16 @@ const CategoryCard = ({ title, description, image, redirectFunc, id }) => {
         height: '350px',
         padding: 2,
         borderRadius: 2,
-        boxShadow: 3,
-        backgroundColor: '#fff',
+        boxShadow: isSelected
+          ? '0 4px 20px rgba(0, 0, 0, 0.2)'
+          : '0 2px 10px rgba(0, 0, 0, 0.1)',
+        backgroundColor: isSelected ? '#f0f8ff' : '#fff', // Light blue for selected, white for default
         textAlign: 'center',
         margin: '0 10px',
         cursor: 'pointer',
+        border: isSelected ? '2px solid #FF4D4D' : '1px solid #e0e0e0', // Primary color for selected
+        transform: isSelected ? 'scale(0.93)' : 'scale(1)', // Slight scale effect when selected
+        transition: 'all 0.3s ease-in-out', // Smooth transition for changes
       }}
     >
       <Image

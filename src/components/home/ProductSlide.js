@@ -67,7 +67,7 @@ const ProductSlide = ({ data, title, slidesToShow, firstR, secondR }) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        width: '100%', // Ensure it spans the full width of the container
+        width: '100%',
       }}
       ref={ref}
     >
@@ -80,9 +80,9 @@ const ProductSlide = ({ data, title, slidesToShow, firstR, secondR }) => {
         <Typography
           variant="h2"
           sx={{
-            mb: 4,
-            textAlign: 'center',
             mt: 5,
+            mb: 4,
+            textAlign: 'left',
             fontSize: {
               xs: '1.5rem',
               sm: '3rem',

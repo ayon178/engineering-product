@@ -185,7 +185,13 @@ const Slider = () => {
                       padding: '15px',
                       paddingLeft: index === 0 ? '45px' : '15px',
                       paddingRight: index === 0 ? '45px' : '15px',
-                      borderRadius: '10px',
+                      borderRadius: `${
+                        index === 0
+                          ? '0 10px 10px 0' // Top-right and bottom-right radius
+                          : index === 1
+                          ? '10px' // All sides radius
+                          : '10px 0 0 10px' // Top-left and bottom-left radius
+                      }`,
                     }}
                   >
                     <Typography

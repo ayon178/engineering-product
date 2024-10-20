@@ -24,13 +24,19 @@ const AskForQuote = () => {
       ref={ref}
       sx={{
         position: 'relative',
-        height: '550px',
-        backgroundImage: `url(https://180engineering.com/wp-content/uploads/2022/07/Life-As-a-Manufacturing-Engineer.jpg)`, // Replace with your background image path
+        height: '650px',
+        backgroundImage: `
+      linear-gradient(
+        rgba(0, 0, 0, 0.6),  /* Starting black overlay with 60% opacity */
+        rgba(0, 0, 0, 0.6)   /* Ending black overlay with 60% opacity */
+      ),
+      url(https://i.ibb.co/6v03NHP/cta.jpg)  /* Replace with your background image path */
+    `,
         backgroundSize: 'cover',
-        backgroundPosition: 'top',
+        backgroundPosition: 'center',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         textAlign: 'center',
         color: '#fff',
         padding: '20px',

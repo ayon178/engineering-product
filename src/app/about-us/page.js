@@ -8,10 +8,10 @@ const AboutPage = () => {
   return (
     <>
       <HalfBanner />
-      <DescriptionSection />
-      <OurBrands />
+      {/* <DescriptionSection /> */}
       <AboutUs />
       <CoreFeaturesSection />
+      <OurBrands />
     </>
   )
 }

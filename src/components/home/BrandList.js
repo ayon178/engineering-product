@@ -26,7 +26,7 @@ const BrandList = () => {
     >
       <Grid container spacing={2}>
         {/* Left Section: Heading and Paragraph */}
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} sx={{ paddingLeft: 10, paddingRight: 10 }}>
           <Typography
             variant="h4"
             sx={{
@@ -37,6 +37,7 @@ const BrandList = () => {
                 xs: '1.2rem',
                 sm: '2rem',
               },
+              paddingLeft: 10,
             }}
           >
             Our Brands
@@ -50,6 +51,7 @@ const BrandList = () => {
                 xs: '0.8rem',
                 sm: '1.2rem',
               },
+              paddingLeft: 10,
             }}
           >
             We provide a wide range of services to help you achieve your goals.
@@ -77,7 +79,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -93,7 +95,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -109,7 +111,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -138,7 +140,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -154,7 +156,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -182,7 +184,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -198,7 +200,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -214,7 +216,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}
@@ -230,7 +232,7 @@ const BrandList = () => {
                     xs: '.2rem .4rem',
                     md: '1rem 2rem',
                   },
-                  width: '90%',
+                  width: '70%',
                   height: '90%',
                   position: 'relative',
                 }}

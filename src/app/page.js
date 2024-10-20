@@ -48,6 +48,7 @@ import {
   pSolarEquipment2,
   pSolarEquipment3,
 } from '@/constant/images'
+import { Typography } from '@mui/material'
 
 const elevator = [
   // {
@@ -256,6 +257,23 @@ export default function Home() {
       {/* <OurProducts /> */}
 
       {/* <CommitmentSection /> */}
+      <Typography
+        variant="h2"
+        sx={{
+          textAlign: 'center',
+          mt: 10,
+          fontSize: {
+            xs: '1.8rem',
+            sm: '3.5rem',
+          },
+          borderBottom: '2px solid #FF4D4D',
+          width: 'fit-content',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+      >
+        Our Products
+      </Typography>
 
       <ProductSlide
         data={elevator}

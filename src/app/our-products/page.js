@@ -15,8 +15,8 @@ const OurProductsPage = () => {
   return (
     <>
       <OurProductsBanner />
-      <OurProducts />
-      <ProductCategories setId={setId} />
+      {/* <OurProducts /> */}
+      <ProductCategories setId={setId} id={id} />
       {id == 1 ? (
         <Elevator />
       ) : id == 4 ? (
