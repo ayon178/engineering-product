@@ -53,6 +53,7 @@ import pSolarEquipment2 from '@/assets/Products/Solar-Equipment/giant_254290.jpg
 import pSolarEquipment3 from '@/assets/Products/Solar-Equipment/solar-systemUntitled design.jpg'
 
 import aboutImg from '@/assets/About.PNG'
+import aboutImg2 from '@/assets/about1.PNG'
 import whyUs from '@/assets/why-us.jpg'
 
 // What we offer images
@@ -79,6 +80,7 @@ import brand9 from '@/assets/brand/9.png'
 export {
   Logo,
   aboutImg,
+  aboutImg2,
   whyUs,
   slider1,
   slider2,

@@ -15,10 +15,9 @@ import {
 import { useInView } from 'react-intersection-observer'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { aboutImg } from '@/constant/images'
 import { COLORS } from '@/constant/constant'
 
-const AboutUs = () => {
+const AboutUs = ({ img }) => {
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -34,7 +33,7 @@ const AboutUs = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           maxWidth: '1400px', // Increased width
-          margin: '0 auto',
+          margin: '10px auto',
         }}
         component={motion.div}
         initial={{ opacity: 0, y: 50 }}
@@ -54,11 +53,12 @@ const AboutUs = () => {
           }}
         >
           <Image
-            src={aboutImg}
+            src={img}
             alt="About Us Image"
             layout="responsive"
             width={600}
             height={350}
+            style={{ borderRadius: '10px' }}
           />{' '}
           {/* Increased Image size */}
         </Box>

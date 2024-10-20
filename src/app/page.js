@@ -47,8 +47,10 @@ import {
   pSolarEquipment1,
   pSolarEquipment2,
   pSolarEquipment3,
+  aboutImg2,
 } from '@/constant/images'
 import { Typography } from '@mui/material'
+import { aboutImg } from '@/constant/images'
 
 const elevator = [
   // {
@@ -251,7 +253,8 @@ export default function Home() {
     <>
       {/* <Slider /> */}
       <Slider2 />
-      <AboutUs />
+      <AboutUs img={aboutImg} />
+      <AboutUs img={aboutImg2} />
       <CoreFeaturesSection />
       <PriceQuote />
       {/* <OurProducts /> */}
